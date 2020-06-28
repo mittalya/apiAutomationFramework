@@ -1,0 +1,111 @@
+// Add address-
+
+{
+  "location": {
+    "lat": -38.382594,
+    "lng": 33.429362
+ },
+ "accuracy":50,
+ "name": "Rahul Shettu Academy",
+ "phone_number": "(+91) 880 989 0987",
+ "address": "5111 Rockerfeller St, US",
+ "types": [
+  "shoe park",
+  "shop"
+  ],
+  "website": "http://rahulshettyacademy.com",
+  "language": "French-IN"
+}
+
+
+given().accept(arg0)given().log().all().queryParam("key", "qaclick123").header("Content-Type","application/json")
+			.body("{\r\n" + 
+					"  \"location\": {\r\n" + 
+					"    \"lat\": -38.382594\r\n" + 
+					"    \"lng\": 33.429362\r\n" + 
+					" },\r\n" + 
+					" \"accuracy\":50,\r\n" + 
+					" \"name\": \"Rahul Shettu Academy\",\r\n" + 
+					" \"phone_number\": \"(+91) 880 989 0987\",\r\n" + 
+					" \"address\": \"5111 Rockerfeller St, US\",\r\n" + 
+					" \"types\": [\r\n" + 
+					"  \"shoe park\",\r\n" + 
+					"  \"shop\"\r\n" + 
+					"  ],\r\n" + 
+					"  \"website\": \"http://rahulshettyacademy.com\",\r\n" + 
+					"  \"language\": \"French-IN\"\r\n" + 
+					"}").when().post("maps/api/place/add/json")
+			.then().log().all().assertThat().statusCode(200);
+
+
+
+//update address- 
+
+{
+ "place_id" : place_Id,
+ "address": "5015 Summer St, UK",
+ "key": "qaclick123"
+}
+
+Complex json:
+
+{
+  "dashboard" : {
+     "purchaseAmount": 910
+	 "website" : "rahulshettyacademy.com"
+},
+"courses":[
+    {
+	  "title" : "Selenium Python",
+	  "price" : 50,
+	  "copies" : 6
+	},
+	{
+	  "title" : "Cypress",
+	  "price" : 40,
+	  "copies" : 4
+	}
+	{
+	"title" : "RPA",
+	  "price" : 45,
+	  "copies" : 10
+	}
+  ]
+}
+
+
+
+
+
+
+{
+"dashboard": {
+"purchaseAmount": 910,
+"website": "rahulshettyacademy.com"
+},
+"courses": [
+{
+"title": "Selenium Python",
+"price": 50,
+"copies": 6
+},
+{
+"title": "Cypress",
+"price": 40,
+"copies": 4
+},
+{
+"title": "RPA",
+"price": 45,
+"copies": 10
+}
+]
+}
+
+addbook API:
+{
+"name": "Learn Appium Automation with Java",
+"isbn": "bccd",
+"aisle": "2270",
+"author":John foe"
+}
